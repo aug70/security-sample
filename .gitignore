@@ -1,0 +1,16 @@
+.DS_Store
+.settings
+.gradle
+target
+build
+bin
+.classpath
+.project
+*.db
+logs
+apache-tomcat-*
+*.log
+output.*
+todo.txt
+generated
+*.releaseBackUp
