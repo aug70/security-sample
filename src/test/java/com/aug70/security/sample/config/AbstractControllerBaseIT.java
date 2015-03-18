@@ -1,11 +1,14 @@
 package com.aug70.security.sample.config;
 
+import javax.servlet.Filter;
+
 import org.junit.After;
 import org.junit.Before;
 import org.junit.runner.RunWith;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.core.env.Environment;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.ContextHierarchy;
@@ -33,12 +36,15 @@ public abstract class AbstractControllerBaseIT {
 	@Autowired
 	protected WebApplicationContext webApplicationContext;
 
+	@Autowired
+	@Qualifier("springSecurityFilterChain")
+	protected Filter filter;
 	
 	protected MockMvc mockMvc;
 	
 	@Before
     public void setUp() {
-        this.mockMvc = MockMvcBuilders.webAppContextSetup(this.webApplicationContext).build();
+        this.mockMvc = MockMvcBuilders.webAppContextSetup(this.webApplicationContext).addFilters(filter).build();
 	}
 	
 	@After
