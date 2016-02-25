@@ -7,7 +7,7 @@ services:
  - redis
 
 script:
- - mvn clean cobertura:cobertura install -Pshippable -Djava.awt.headless=true
+ - mvn clean cobertura:cobertura install
 
 notifications:
      email:
