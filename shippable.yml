@@ -7,7 +7,7 @@ services:
  - redis
 
 script:
- - mvn clean cobertura:cobertura install
+ - mvn clean cobertura:cobertura
 
 notifications:
      email:
