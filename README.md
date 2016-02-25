@@ -1,4 +1,4 @@
-[![Build Status](https://api.shippable.com/projects/56ce5d4922366a0c003ea90e/badge?branchName=master)](https://app.shippable.com/projects/56ce5d4922366a0c003ea90e/builds/latest)
+[![Build Status](https://api.shippable.com/projects/5508a4f05ab6cc1352a35e4e/badge?branchName=master)](https://app.shippable.com/projects/5508a4f05ab6cc1352a35e4e/builds/latest)
 
 # security-sample
 
