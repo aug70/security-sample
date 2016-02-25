@@ -1,7 +1,11 @@
+[![Build Status](https://api.shippable.com/projects/56ce5d4922366a0c003ea90e/badge?branchName=master)](https://app.shippable.com/projects/56ce5d4922366a0c003ea90e/builds/latest)
+
 # security-sample
 
-This is related to Stackoverflow question 
-[Spring security OAuth2 clientDetailsService circular reference?](http://stackoverflow.com/questions/29069121/spring-security-oauth2-clientdetailsservice-circular-reference?noredirect=1#comment46435461_29069121)
+This project is related to below StackOverflow questions; 
+
+* [Spring security OAuth2 clientDetailsService circular reference?](http://stackoverflow.com/questions/29069121/spring-security-oauth2-clientdetailsservice-circular-reference?noredirect=1#comment46435461_29069121)
+* [Spring OAuth2 2.0.8 upgrade](http://stackoverflow.com/questions/35496545/spring-oauth2-2-0-8-upgrade?noredirect=1#comment58875905_35496545)
 
 
 ```
@@ -12,9 +16,7 @@ mvn tomcat7:run-war
 ```
 
 
-(Dave Syer's fixes applied on master branch) 
-
-Execute curls below
+Execute curls below to test.
 
 
 ### Grant type client credentials
