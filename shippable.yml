@@ -1,0 +1,17 @@
+language: java
+
+jdk:
+ - oraclejdk8
+
+services:
+ - redis
+
+script:
+ - mvn clean cobertura:cobertura
+
+notifications:
+     email:
+         recipients:
+             - aug70co@gmail.com
+         on_success: change
+         on_failure: always
