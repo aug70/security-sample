@@ -5,6 +5,7 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Primary;
 import org.springframework.core.annotation.Order;
+import org.springframework.data.redis.connection.RedisConnectionFactory;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
@@ -26,7 +27,7 @@ import org.springframework.security.oauth2.provider.request.DefaultOAuth2Request
 import org.springframework.security.oauth2.provider.token.DefaultTokenServices;
 import org.springframework.security.oauth2.provider.token.ResourceServerTokenServices;
 import org.springframework.security.oauth2.provider.token.TokenStore;
-import org.springframework.security.oauth2.provider.token.store.InMemoryTokenStore;
+import org.springframework.security.oauth2.provider.token.store.redis.RedisTokenStore;
 
 @Configuration
 public class SecurityConfig {
@@ -105,6 +106,9 @@ public class SecurityConfig {
 			AuthorizationServerConfigurerAdapter {
 
 		@Autowired
+		private RedisConnectionFactory redisConnectionFactory;
+		
+		@Autowired
 		private ClientDetailsService clientDetailsService;
 
 		@Autowired
@@ -112,7 +116,7 @@ public class SecurityConfig {
 
 		@Bean
 		public TokenStore tokenStore() {
-			return new InMemoryTokenStore();
+			return new RedisTokenStore(redisConnectionFactory);
 		}
 
 		@Bean
