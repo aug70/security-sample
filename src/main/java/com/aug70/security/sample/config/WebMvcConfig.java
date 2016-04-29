@@ -18,8 +18,8 @@ public class WebMvcConfig extends WebMvcConfigurerAdapter {
 	@Override
 	public void addResourceHandlers(ResourceHandlerRegistry registry) {
 		
-		registry.addResourceHandler("/index.html").addResourceLocations("/WEB-INF/resources/index.html");
-		registry.addResourceHandler("/secured.html").addResourceLocations("/WEB-INF/resources/secured.html");
+		registry.addResourceHandler("/index").addResourceLocations("/WEB-INF/resources/index.html");
+		registry.addResourceHandler("/secured").addResourceLocations("/WEB-INF/resources/secured.html");
 		
 	}
 

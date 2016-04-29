@@ -17,7 +17,7 @@ public class SecurityConfigIT extends AbstractControllerBaseIT {
 						.accept(MediaType.APPLICATION_JSON)
 						.param("grant_type", "password")
 						.param("client_id", "sample-client")
-						.param("client_secret", "11111111-1111-1111-1111-111111111111")
+						.param("client_secret", "secret")
 						.param("scope", "trust").param("username", "tester")
 						.param("password", "121212")).andExpect(
 				status().is(HttpStatus.OK.value()));
@@ -31,7 +31,7 @@ public class SecurityConfigIT extends AbstractControllerBaseIT {
 						.accept(MediaType.APPLICATION_JSON)
 						.param("grant_type", "client_credentials")
 						.param("client_id", "sample-client")
-						.param("client_secret", "11111111-1111-1111-1111-111111111111")
+						.param("client_secret", "secret")
 						.param("scope", "trust")).andExpect(
 				status().is(HttpStatus.OK.value()));
 	}

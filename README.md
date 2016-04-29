@@ -23,7 +23,7 @@ Execute curls below to test.
 
 
 ```
-curl -k -i -H "Accept: application/json" -X POST -d "grant_type=client_credentials&client_id=sample-client&client_secret=11111111-1111-1111-1111-111111111111&scope=trust" https://localhost:8443/security_sample/oauth/token
+curl -k -i -H "Accept: application/json" -X POST -d "grant_type=client_credentials&client_id=sample-client&client_secret=secret&scope=trust" https://localhost:8443/security_sample/oauth/token
 ```
 
 ```
@@ -49,7 +49,7 @@ Date: Fri, 20 Mar 2015 01:20:41 GMT
 
 
 ```
-curl -k -i -H "Accept: application/json" -H "Authorization: Basic c2FtcGxlLWNsaWVudDoxMTExMTExMS0xMTExLTExMTEtMTExMS0xMTExMTExMTExMTE=" -X POST -d "grant_type=client_credentials&scope=trust" https://localhost:8443/security_sample/oauth/token
+curl -k -i -H "Accept: application/json" -H "Authorization: Basic c2FtcGxlLWNsaWVudDpzZWNyZXQ=" -X POST -d "grant_type=client_credentials&scope=trust" https://localhost:8443/security_sample/oauth/token
 ```
 
 ```
@@ -76,7 +76,7 @@ Date: Fri, 20 Mar 2015 01:21:15 GMT
 
 
 ```
-curl -k -i -H "Accept: application/json" -H "Authorization: Basic c2FtcGxlLWNsaWVudDoxMTExMTExMS0xMTExLTExMTEtMTExMS0xMTExMTExMTExMTE=" -X POST -d "grant_type=password&scope=trust&username=tester&password=121212" https://localhost:8443/security_sample/oauth/token
+curl -k -i -H "Accept: application/json" -H "Authorization: Basic c2FtcGxlLWNsaWVudDpzZWNyZXQ=" -X POST -d "grant_type=password&scope=trust&username=tester&password=121212" https://localhost:8443/security_sample/oauth/token
 ```
 
 ```
@@ -101,7 +101,7 @@ Date: Fri, 20 Mar 2015 01:21:50 GMT
 ### Grant type password
 
 ```
-curl -k -i -H "Accept: application/json" -X POST -d "grant_type=password&client_id=sample-client&client_secret=11111111-1111-1111-1111-111111111111&scope=trust&username=tester&password=121212" https://localhost:8443/security_sample/oauth/token
+curl -k -i -H "Accept: application/json" -X POST -d "grant_type=password&client_id=sample-client&client_secret=secret&scope=trust&username=tester&password=121212" https://localhost:8443/security_sample/oauth/token
 ```
 
 ```
